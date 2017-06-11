@@ -11,7 +11,7 @@ function ProjectsIndexController ($http) {
     method: 'GET',
     url: '/api/projects'
   }).then(function successCallback(response) {
-    vm.projects = response.data;
+    vm.project = response.data;
   }, function errorCallback(response) {
     console.log('There was an error getting the data', response);
   });
@@ -22,7 +22,7 @@ function ProjectsIndexController ($http) {
       url: '/api/projects',
       data: vm.newProject,
     }).then(function successCallback(response) {
-      vm.projects.push(response.data);
+      vm.project.push(response.data);
     }, function errorCallback(response) {
       console.log('There was an error posting the data', response);
     });
@@ -46,7 +46,7 @@ function ProjectsIndexController ($http) {
       url: '/api/projects/'+ project._id
     }).then(function successCallback(json) {
       var index = vm.projects.indexOf(project);
-      vm.projects.splice(index,1)
+      vm.project.splice(index,1)
     }, function errorCallback(response) {
       console.log('There was an error deleting the data', response);
     });

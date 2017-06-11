@@ -3,54 +3,6 @@
 
 var db = require('./models');
 
-var filmList = [];
-  filmList.push({
-    title: "Seven",
-    director: "David Fincher",
-    genre: "Thriller",
-    releaseDate: "September 22, 1995",
-    topBilledCast: ["Brad Pitt", "Morgan Freeman", "Kevin Spacey"],
-    image: "/public/images/seven-poster.jpeg"
-  });
-  filmList.push({
-    title: "The Game",
-    director: "David Fincher",
-    genre: "Thriller",
-    releaseDate: "September 12, 1997",
-    topBilledCast: ["Michael Douglas", "Sean Penn"],
-    image: "/public/images/the-game-poster.jpg"
-  });
-filmList.push({
-    title: "Short Term 12",
-    director: "Destin Daniel Cretton",
-    genre: "Drama",
-    releaseDate: "August 23, 2013",
-    topBilledCast: ["Brie Larson", "John Gallagher Jr.", "Keith Stanfield"],
-    image: "/public/images/short-term-12-poster.jpg"
-  });
-  filmList.push({
-    title: "Get Out",
-    director: "Jordan Peele",
-    genre: "Horror",
-    releaseDate: "February 24, 2017",
-    topBilledCast: ["Daniel Kaluuya", "Allison Williams", "Catherine Keener", "Bradley Whitford"],
-    image: "/public/images/get-out-poster.jpg"
-  });
-
-var directorList = [];
-  directorList.push({
-    name: "David Fincher",
-    alive: true
-  });
-  directorList.push({
-    name: "Destin Daniel Cretton",
-    alive: true
-  });
-  directorList.push({
-    name: "Jordan Peele",
-    alive: true
-  });
-
 var projectList = [];
   projectList.push({
     title: "Tic Tac Toe",
@@ -86,6 +38,55 @@ db.Project.remove(function(err, succ){
     db.Project.find(succ);
   });
 });
+
+// var filmList = [];
+//   filmList.push({
+//     title: "Seven",
+//     director: "David Fincher",
+//     genre: "Thriller",
+//     releaseDate: "September 22, 1995",
+//     topBilledCast: ["Brad Pitt", "Morgan Freeman", "Kevin Spacey"],
+//     image: "/public/images/seven-poster.jpeg"
+//   });
+//   filmList.push({
+//     title: "The Game",
+//     director: "David Fincher",
+//     genre: "Thriller",
+//     releaseDate: "September 12, 1997",
+//     topBilledCast: ["Michael Douglas", "Sean Penn"],
+//     image: "/public/images/the-game-poster.jpg"
+//   });
+// filmList.push({
+//     title: "Short Term 12",
+//     director: "Destin Daniel Cretton",
+//     genre: "Drama",
+//     releaseDate: "August 23, 2013",
+//     topBilledCast: ["Brie Larson", "John Gallagher Jr.", "Keith Stanfield"],
+//     image: "/public/images/short-term-12-poster.jpg"
+//   });
+//   filmList.push({
+//     title: "Get Out",
+//     director: "Jordan Peele",
+//     genre: "Horror",
+//     releaseDate: "February 24, 2017",
+//     topBilledCast: ["Daniel Kaluuya", "Allison Williams", "Catherine Keener", "Bradley Whitford"],
+//     image: "/public/images/get-out-poster.jpg"
+//   });
+//
+// var directorList = [];
+//   directorList.push({
+//     name: "David Fincher",
+//     alive: true
+//   });
+//   directorList.push({
+//     name: "Destin Daniel Cretton",
+//     alive: true
+//   });
+//   directorList.push({
+//     name: "Jordan Peele",
+//     alive: true
+//   });
+
 
 
 // db.Film.remove({}, function(err, films){
