@@ -6,7 +6,7 @@ var db = require('../models');
 
 
 
-// GET /api/films
+// GET /api/project
 function index(req, res) {
   db.Project.find({}, function(err, allProjects) {
     res.json(allProjects);

@@ -9,15 +9,15 @@ config.$inject = ['$routeProvider', '$locationProvider'];
 function config ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: '/templates/films',
-      controller: 'FilmsIndexController',
-      controllerAs: 'filmsIndexCtrl'
+      templateUrl: '/',
+      controller: 'ProjectsIndexController',
+      controllerAs: 'projectsIndexCtrl'
     })
-    .when('/films/:id', {
-      templateUrl: '/templates/films-show',
-      controller: 'FilmsShowController',
-      controllerAs: 'filmsShowsCtrl'
-    })
+    // .when('/films/:id', {
+    //   templateUrl: '/templates/films-show',
+    //   controller: 'FilmsShowController',
+    //   controllerAs: 'filmsShowsCtrl'
+    // })
 
     $locationProvider.html5Mode({
       enabled: true,

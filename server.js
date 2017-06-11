@@ -16,6 +16,12 @@ app.use(bodyParser.json());
 // We're placing these under /vendor to differentiate them from our own assets
 app.use('/vendor', express.static(__dirname + '/bower_components'));
 
+var controllers = require('./controllers');
+
+/**********
+ * ROUTES *
+ **********/
+
 /*
  * HTML Endpoints
  */
@@ -27,4 +33,31 @@ app.get('/', function homepage (req, res) {
 app.get('/templates/:name', function templates(req, res) {
   var name = req.params.name;
   res.sendFile(__dirname + '/views/templates/' + name + '.html');
+});
+
+/*
+ * JSON API Endpoints
+ */
+
+app.get('/api', controllers.api.index);
+
+app.get('/api/projects', controllers.project.index);
+app.get('/api/projects/:projectId', controllers.project.show);
+app.post('/api/projects', controllers.project.create);
+app.delete('/api/projects/:projectId', controllers.project.destroy);
+app.put('/api/projects/:projectId', controllers.project.update);
+
+// ALL OTHER ROUTES (ANGULAR HANDLES)
+// redirect all other paths to index
+app.get('*', function homepage (req, res) {
+  res.sendFile(__dirname + '/views/index.html');
+});
+
+/**********
+ * SERVER *
+ **********/
+
+// listen on port 3000
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Express server is running on http://localhost:3000/');
 });

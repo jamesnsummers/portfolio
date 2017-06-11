@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost/portfolio");
 
-var Film = require('./film');
+var Project = require('./project');
 
-module.exports.Film = Film;
+module.exports.Project = Project;

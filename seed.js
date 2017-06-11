@@ -78,16 +78,26 @@ var projectList = [];
     url: "http://tacomg.herokuapp.com"
   });
 
-db.Film.remove({}, function(err, films){
-
-  db.Film.create(filmList, function(err, films){
-    if (err) { return console.log('ERROR', err); }
-    console.log("all albums:", films);
-    console.log("created", films.length, "films");
-    process.exit();
+db.Project.remove(function(err, succ){
+  db.Project.create(projectList, function(err, succ){
+    if (err){
+      return console.log("error:", err);
+    }
+    db.Project.find(succ);
   });
-
 });
+
+
+// db.Film.remove({}, function(err, films){
+//
+//   db.Film.create(filmList, function(err, films){
+//     if (err) { return console.log('ERROR', err); }
+//     console.log("all albums:", films);
+//     console.log("created", films.length, "films");
+//     process.exit();
+//   });
+//
+// });
 
 // db.Director.remove(function(err, succ){
 //   db.Director.create(director_list, function(err, newDirector){
@@ -123,12 +133,3 @@ db.Film.remove({}, function(err, films){
 //     return console.log(film_list);
 //   });
 // });
-
-db.Project.remove(function(err, succ){
-  db.Project.create(projectList, function(err, succ){
-    if (err){
-      return console.log("error:", err);
-    }
-    db.Project.find(succ);
-  });
-});
