@@ -17,110 +17,19 @@
 
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/FilmsIndexController.js"></script>
+    <script src="/scripts/controllers/ProjectsIndexController.js"></script>
+    <script src="/scripts/controllers/ProjectsShowController.js"></script>
 
   </head>
   <body>
     <div class="jumbotron">
       <div class="container">
-        <a href="/"><h1>Welcome to James</h1></a>
+        <a href="/"><h1>James N Summers</h1></a>
         <p>Developer</p>
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-
-          <form class="form-horizontal" ng-submit="projectsIndexCtrl.createProject()">
-            <fieldset>
-
-              <!-- Form Name -->
-              <legend>Add New Project</legend>
-
-              <!-- Text input-->
-              <div class="form-group">
-                <label class="col-md-4 control-label">Title:</label>
-                <div class="col-md-4">
-                <input id="name" ng-model="projectsIndexCtrl.newProject.title" type="text" class="form-control input-md" required="">
-                </div>
-              </div>
-
-              <!-- Text input-->
-              <div class="form-group">
-                <label class="col-md-4 control-label">Date Completed:</label>
-                <div class="col-md-4">
-                <input ng-model="projectsIndexCtrl.newProject.dateCompleted" type="text" class="form-control input-md">
-                </div>
-              </div>
-
-              <!-- Text input-->
-              <div class="form-group">
-                <label class="col-md-4 control-label">Link:</label>
-                <div class="col-md-4">
-                <input ng-model="projectsIndexCtrl.newProject.url" type="text" class="form-control input-md">
-                </div>
-              </div>
-
-
-              <!-- Button -->
-              <div class="form-group">
-                <label class="col-md-4 control-label">Save Project</label>
-                <div class="col-md-4">
-                  <button class="btn btn-success">Submit</button>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-
-      <input type="text" class="form-control" ng-model="searchText" placeholder="Search Films">
-      <div ng-repeat="project in projectsIndexCtrl.projects | orderBy: 'title' | filter: searchText" class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-body">
-
-              <div class='row'>
-                <div class="col-md-3 col-xs-12 thumbnail">
-                  <img src="images/800x800.png" alt="project image">
-                </div>
-
-                <div class="col-md-9 col-xs-12">
-                  <ul class="list-group form-inline">
-                    <li class="list-group-item">
-                      <h4 class='inline-header'>Title:</h4>
-                      <span ng-hide="editing"><a ng-href="projects/{{project._id}}">{{project.title}}</a></span>
-                      <input ng-show="editing" ng-model="project.title" type="text" class="form-control input-md">
-                    </li>
-
-                    <li class="list-group-item">
-                      <h4 class='inline-header'>Date Completed:</h4>
-                      <span ng-hide="editing">{{project.dateCompleted}}</span>
-                      <input ng-show="editing" ng-model="project.dateCompleted" type="text" class="form-control input-md">
-                    </li>
-
-                    <li class="list-group-item">
-                      <h4 class='inline-header'>Link:</h4>
-                      <span ng-hide="editing">{{project.url}}</span>
-                      <input ng-show="editing" ng-model="project.url" type="text" class="form-control input-md">
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class='panel-footer'>
-                <div class='panel-footer'>
-                  <button class='btn btn-danger' ng-click="projectsIndexCtrl.deleteProject(project)">Remove Project</button>
-                  <button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Project</button>
-                  <button class='btn btn-success' ng-show="editing" ng-click="projectsIndexCtrl.editProject(project); editing = false">Save Changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div ng-view></div>
 
   </body>
 

@@ -35,6 +35,7 @@ db.Project.remove(function(err, succ){
     if (err){
       return console.log("error:", err);
     }
+    console.log("all projects:", projectList);
     db.Project.find(succ);
   });
 });
