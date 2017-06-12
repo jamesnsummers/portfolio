@@ -13,11 +13,11 @@ function config ($routeProvider, $locationProvider) {
       controller: 'ProjectsIndexController',
       controllerAs: 'projectsIndexCtrl'
     })
-    // .when('/films/:id', {
-    //   templateUrl: '/templates/films-show',
-    //   controller: 'FilmsShowController',
-    //   controllerAs: 'filmsShowsCtrl'
-    // })
+    .when('/projects/:id', {
+      templateUrl: '/templates/projects-show',
+      controller: 'ProjectsShowController',
+      controllerAs: 'projectsShowCtrl'
+    })
 
     $locationProvider.html5Mode({
       enabled: true,

@@ -7,7 +7,7 @@ var projectList = [];
   projectList.push({
     title: "Tic Tac Toe",
     dateCompleted: "May 7, 2017",
-    url: "https://github.com/jamesnsummers/tic-tac-toe.git"
+    url: "http://jim-jac-joe.bitballoon.com/"
   });
   projectList.push({
     title: "Ajaxify Reddit",
