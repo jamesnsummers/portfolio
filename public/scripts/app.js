@@ -9,7 +9,17 @@ config.$inject = ['$routeProvider', '$locationProvider'];
 function config ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
+      templateUrl: '/templates/home',
+      controller: 'ProjectsIndexController',
+      controllerAs: 'projectsIndexCtrl'
+    })
+    .when('/projects', {
       templateUrl: '/templates/projects',
+      controller: 'ProjectsIndexController',
+      controllerAs: 'projectsIndexCtrl'
+    })
+    .when('/projects/add', {
+      templateUrl: '/templates/projects-add',
       controller: 'ProjectsIndexController',
       controllerAs: 'projectsIndexCtrl'
     })
@@ -17,11 +27,6 @@ function config ($routeProvider, $locationProvider) {
       templateUrl: '/templates/projects-show',
       controller: 'ProjectsShowController',
       controllerAs: 'projectsShowCtrl'
-    })
-    .when('/projects/add', {
-      templateUrl: '/templates/projects-add',
-      controller: 'ProjectsIndexController',
-      controllerAs: 'projectsIndexCtrl'
     })
 
     $locationProvider.html5Mode({

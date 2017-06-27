@@ -1,32 +1,28 @@
 <div class="container" ng-controller="ProjectsShowController as projectsShowCtrl", "ProjectsIndexController as projectsIndexCtrl">
   <div class='row'>
-    <div class="col-md-3 col-xs-12 thumbnail">
-      <img src="/images/800x800.png" alt="project image">
+    <div class="col s12 m6">
+      <img class="thumbnail" src="/images/800x800.png" alt="project image">
     </div>
 
-    <div class="col-md-9 col-xs-12">
-      <ul class="list-group form-inline">
-        <li class="list-group-item">
-          <h4 class='inline-header'>Title:</h4>
-          <span ng-hide="editing">{{projectsShowCtrl.project.title}}</span>
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-content">
+          <span ng-hide="editing" class="card-title">{{projectsShowCtrl.project.title}}</span>
           <input ng-show="editing" ng-model="projectsShowCtrl.project.title" type="text" class="form-control input-md">
-        </li>
-
-        <li class="list-group-item">
-          <h4 class='inline-header'>Date Completed:</h4>
-          <span ng-hide="editing">{{projectsShowCtrl.project.dateCompleted}}</span>
+          <br><span ng-hide="editing">Date Complete: {{projectsShowCtrl.project.dateCompleted}}</span>
           <input ng-show="editing" ng-model="projectsShowCtrl.project.dateCompleted" type="text" class="form-control input-md">
-        </li>
+          <br><br><span ng-hide="editing"><a href="{{projectsShowCtrl.project.url}}">View Project on Github</a></span>
+          <input ng-show="editing" ng-model="projectsShowCtrl.project.url" type="text" class="form-control input-md"><br><br>
+          <button class='waves-effect waves-light btn' ng-hide="editing" ng-click="editing = true">Edit Project</button>
+          <br><button class='waves-effect waves-light btn' ng-show="editing" ng-click="projectsIndexCtrl.editProject(project); editing = false">Save Changes</button>
+          <br><a href="/projects">Return to Projects Page</a>
+        </div>
 
-        <li class="list-group-item">
-          <h4 class='inline-header'>Link:</h4>
-          <span ng-hide="editing"><a href="{{projectsShowCtrl.project.url}}">View Project</a></span>
-          <input ng-show="editing" ng-model="projectsShowCtrl.project.url" type="text" class="form-control input-md">
-        </li>
-      </ul>
+
+
+      </div>
     </div>
   </div>
 
-  <a href="/">Return to Home Page</a>
 
 </div>

@@ -7,9 +7,17 @@
     <title>James N Summers</title>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
+
     <link rel="stylesheet" href="/styles/main.css">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+    <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Josefin+Sans" rel="stylesheet">
@@ -25,15 +33,21 @@
 
   </head>
   <body>
-    <div class="jumbotron">
-      <div class="container">
-        <a href="/"><h1>James N Summers</h1></a>
-        <p>Developer</p>
-      </div>
-      <div class="col-md-4 pull-right">
-        <input type="text" class="form-control" ng-model="searchText" placeholder="Jump To Project">
-      </div>
-    </div>
+    <a class='dropdown-button btn right' data-beloworigin="true" href='#' data-activates='dropdown1'>Menu</a>
+    <ul id='dropdown1' class='dropdown-content'>
+      <li>Jump to:</li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li>External Links</li>
+      <li><a href="https://www.linkedin.com/in/jamesnsummers/">LinkedIn</a></li>
+      <li><a href="https://www.twitter.com/jamesnsummers/">Twitter</a></li>
+      <li><a href="https://github.com/jamesnsummers">Github</a></li>
+    </ul>
+
+    <h1>James N Summers</h1>
+
+    <h5>Full Stack Developer</h5>
+
 
     <div ng-view></div>
 
