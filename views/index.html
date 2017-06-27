@@ -9,7 +9,10 @@
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Josefin+Sans" rel="stylesheet">
 
     <!-- VENDOR SCRIPTS -->
     <script src="/vendor/angular/angular.min.js"></script>
@@ -26,6 +29,9 @@
       <div class="container">
         <a href="/"><h1>James N Summers</h1></a>
         <p>Developer</p>
+      </div>
+      <div class="col-md-4 pull-right">
+        <input type="text" class="form-control" ng-model="searchText" placeholder="Jump To Project">
       </div>
     </div>
 

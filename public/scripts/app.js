@@ -18,6 +18,11 @@ function config ($routeProvider, $locationProvider) {
       controller: 'ProjectsShowController',
       controllerAs: 'projectsShowCtrl'
     })
+    .when('/projects/add', {
+      templateUrl: '/templates/projects-add',
+      controller: 'ProjectsIndexController',
+      controllerAs: 'projectsIndexCtrl'
+    })
 
     $locationProvider.html5Mode({
       enabled: true,
