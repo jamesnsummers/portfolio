@@ -1,41 +1,45 @@
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background-image: url("/images/james.jpg");
-    background-size: cover;
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url("/images/james.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
 nav {
-    padding-left: 2%;
-    padding-right: 2%;
-    background-image: url("/images/background.jpg");
-    opacity: .8;
-  }
+  padding-left: 2%;
+  padding-right: 2%;
+  background-image: url("/images/background.jpg");
+  opacity: .8;
+}
+
+#mobile-demo {
+  opacity: .7;
+}
 
 main {
-    flex: 1 0 auto;
-  }
+  flex: 1 0 auto;
+}
 
 footer {
-    padding-left: 2%;
-    padding-right: 2%;
-    background-image: url("/images/background.jpg");
-    background-size: cover;
-    opacity: .8;
-  }
+  padding-left: 2%;
+  padding-right: 2%;
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  opacity: .8;
+  position: sticky;
+}
 
+#home-card {
+  text-align: center;
+  width: 100%;
+}
 
-#home-title {
-    text-align: center;
-    padding-right: 5%;
-  }
-
-#home-bio {
-    text-align: center;
-    margin-left: 58%;
-    width: 100%;
-  }
+#home-card-content {
+  margin-top: 1.5%;
+  height: 95%
+}
 
 h3.center.white-text {
   text-align: right;
@@ -54,16 +58,15 @@ h3.center.white-text {
   width: 350px;
 }
 
-
-#edit-btn {
+/*#edit-btn {
   margin-bottom: 82%;
   margin-right: -2%;
-}
-
+}*/
+/*
 #delete-btn {
   margin-bottom: 82%;
   margin-right: 85%;
-}
+}*/
 
 #add-card-form {
   margin-top: 10%;

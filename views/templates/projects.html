@@ -1,18 +1,24 @@
 <div class="container">
   <div class="row">
     <div class="col s6 offset-s8">
-      <input type="text" class="input-field transparent white-text" ng-model="searchText" placeholder="Search Projects">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" class="input-field transparent white-text" ng-model="searchText">
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
     </div>
   </div>
 </div>
 <div class="row">
-  <div class="col s6 offset-s8">
+  <div class="col s6 m4 offset-s8">
     <h3 id="projects-title" class="white-text">Projects</h3>
   </div>
 <div ng-repeat="project in projectsIndexCtrl.projects | orderBy: 'dateCompleted' | filter: searchText">
     <div class="card col s4 blue-grey darken-3">
       <div class="card-content white-text">
-        <button id="delete-btn" ng-show="editing" ng-click="projectsIndexCtrl.deleteProject(project)" class='btn-floating halfway-fab waves-effect waves-light red accent-2 raised'>X</button>
+        <button id="delete-btn" ng-show="editing" ng-click="projectsIndexCtrl.deleteProject(project)" class='btn-floating left halfway-fab waves-effect waves-light red accent-2 raised'>X</button>
         <span class="card-title" ng-hide="editing"><a ng-href="projects/{{project._id}}">{{project.title}}</a></span>
         <input ng-show="editing" ng-model="project.title" type="text" class="form-control input-md"><br>
         <span ng-hide="editing">Date Completed: {{project.dateCompleted}}</span><br>
