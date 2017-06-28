@@ -13,6 +13,9 @@ function config ($routeProvider, $locationProvider) {
       controller: 'ProjectsIndexController',
       controllerAs: 'projectsIndexCtrl'
     })
+    .when('/resume', {
+      templateUrl: '/templates/resume'
+    })
     .when('/projects', {
       templateUrl: '/templates/projects',
       controller: 'ProjectsIndexController',
