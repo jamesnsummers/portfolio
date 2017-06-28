@@ -1,3 +1,7 @@
+/*GLOBAL STYLES*/
+html {
+  background-color: #455a64;
+}
 body {
   display: flex;
   min-height: 100vh;
@@ -7,6 +11,7 @@ body {
   background-position: center;
 }
 
+/*NAVBAR STYLES*/
 nav {
   padding-left: 2%;
   padding-right: 2%;
@@ -18,32 +23,31 @@ nav {
   opacity: .7;
 }
 
+/*MAIN CONTENT STYLES*/
 main {
   flex: 1 0 auto;
 }
 
+.conatiner {
+  width: 90%;
+}
+
+/*FOOTER STYLES*/
 footer {
   padding-left: 2%;
   padding-right: 2%;
   background-image: url("/images/background.jpg");
   background-size: cover;
   opacity: .8;
-  position: sticky;
 }
 
+/*HOME PAGE STYLES*/
 #home-card {
   text-align: center;
-  width: 100%;
 }
 
 #home-card-content {
-  margin-top: 1.5%;
-  height: 95%
-}
 
-h3.center.white-text {
-  text-align: right;
-  padding-right: 3%;
 }
 
 #projects-title {
@@ -52,26 +56,19 @@ h3.center.white-text {
   margin-left: -10%;
 }
 
+/*GLOBAL CARD STYLES*/
 .card {
   opacity: .9;
   height: 350px;
   width: 350px;
 }
 
-/*#edit-btn {
-  margin-bottom: 82%;
-  margin-right: -2%;
-}*/
-/*
-#delete-btn {
-  margin-bottom: 82%;
-  margin-right: 85%;
-}*/
-
+/*CARD STYLES FOR ADD FORM*/
 #add-card-form {
   margin-top: 10%;
 }
 
+/*CARD STYLES IN SHOW*/
 #card-show {
   margin-top: 10%;
 }
