@@ -21,6 +21,8 @@
         <button ng-show="editing" ng-click="filmsIndexCtrl.deleteFilm(film)" class='btn-floating left halfway-fab waves-effect waves-light red accent-2 raised'>X</button>
         <span class="card-title" ng-hide="editing"><a ng-href="films/{{film._id}}">{{film.title}}</a></span>
         <input ng-show="editing" ng-model="film.title" type="text" class="form-control input-md"><br>
+        <span ng-hide="editing">Director: <br>{{film.director}}</span><br>
+        <input ng-show="editing" ng-model="film.director" type="text" class="form-control input-md"><br>
         <span ng-hide="editing">Release Date: {{film.releaseDate}}</span><br>
         <input ng-show="editing" ng-model="film.releaseDate" type="text" class="form-control input-md"><br>
         <span ng-hide="editing">Genre: <br>{{film.genre}}</span><br>
