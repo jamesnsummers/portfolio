@@ -18,7 +18,6 @@ function create(req, res) {
 
   db.Project.create(req.body, function(err, project) {
     if (err) { console.log('error', err); }
-    console.log(project);
     res.json(project);
   });
 }
@@ -26,7 +25,6 @@ function create(req, res) {
 function show(req, res) {
   db.Project.findById(req.params.projectId, function(err, foundProject) {
     if(err) { console.log('projectsController.show error', err); }
-    console.log('projectsController.show responding with', foundProject);
     res.json(foundProject);
   });
 }
@@ -39,9 +37,8 @@ function destroy(req, res) {
 }
 
 function update(req, res) {
-  console.log('updating with data', req.body);
   db.Project.findById(req.params.projectId, function(err, foundProject) {
-    if(err) { console.log('albumsController.update error', err); }
+    if(err) { console.log('projectsController.update error', err); }
     foundProject.title = req.body.title;
     foundProject.dateCompleted = req.body.dateCompleted;
     foundProject.url = req.body.url;

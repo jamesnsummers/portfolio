@@ -47,11 +47,12 @@ app.post('/api/projects', controllers.project.create);
 app.delete('/api/projects/:projectId', controllers.project.destroy);
 app.put('/api/projects/:projectId', controllers.project.update);
 
-app.get('/api/films', controllers.film.index);
-app.get('/api/films/:filmId', controllers.film.show);
-app.post('/api/films', controllers.film.create);
-app.delete('/api/films/:filmId', controllers.film.destroy);
-app.put('/api/films/:filmId', controllers.film.update);
+// Films pages for future deployment
+app.get('/api/films', controllers.film.indexFilm);
+app.get('/api/films/:filmId', controllers.film.showFilm);
+app.post('/api/films', controllers.film.createFilm);
+app.delete('/api/films/:filmId', controllers.film.destroyFilm);
+app.put('/api/films/:filmId', controllers.film.updateFilm);
 
 // ALL OTHER ROUTES (ANGULAR HANDLES)
 // redirect all other paths to index

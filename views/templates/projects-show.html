@@ -8,16 +8,16 @@
       <div class="card col s12 blue-grey darken-3 hoverable">
         <div class="card-content white-text">
           <span ng-hide="editing" class="card-title">{{projectsShowCtrl.project.title}}</span>
-          <input ng-show="editing" ng-model="projectsShowCtrl.project.title" type="text" class="form-control input-md">
+          <input ng-show="editing" ng-model="projectsShowCtrl.project.title" type="text" class="input-field transparent white-text">
           <br><span ng-hide="editing">Date Complete: {{projectsShowCtrl.project.dateCompleted}}</span>
-          <input ng-show="editing" ng-model="projectsShowCtrl.project.dateCompleted" type="text" class="form-control input-md">
+          <input ng-show="editing" ng-model="projectsShowCtrl.project.dateCompleted" type="text" class="input-field transparent white-text">
           <br><br><span ng-hide="editing"><a href="{{projectsShowCtrl.project.url}}">Link to Project</a></span>
-          <input ng-show="editing" ng-model="projectsShowCtrl.project.url" type="text" class="form-control input-md"><br><br>
+          <input ng-show="editing" ng-model="projectsShowCtrl.project.url" type="text" class="input-field transparent white-text"><br><br>
           <span ng-hide="editing">Description:<br> {{projectsShowCtrl.project.descrip}}</span><br>
-          <input ng-show="editing" ng-model="project.descrip" type="text" class="form-control input-md"><br>
+          <input ng-show="editing" ng-model="projectsShowCtrl.project.descrip" type="text" class="input-field transparent white-text"><br>
+          <br><a ng-hide="editing" href="/projects">Return to Projects Page</a>
           <button id="edit-btn" class='btn-floating halfway-fab waves-effect waves-light blue raised' ng-hide="editing" ng-click="editing = true"><i class="material-icons">mode_edit</i></button>
           <button id="edit-btn" class='btn-floating halfway-fab waves-effect waves-light green accent-3 raised' ng-show="editing" ng-click="projectsIndexCtrl.editProject(project); editing = false"><i class="material-icons">done</i></button>
-          <a href="/projects">Return to Projects Page</a>
         </div>
 
       </div>

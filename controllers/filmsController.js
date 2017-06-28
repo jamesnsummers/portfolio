@@ -1,3 +1,4 @@
+// Film page for future deployment
 /************
  * DATABASE *
  ************/
@@ -5,39 +6,37 @@
 var db = require('../models');
 
 // GET /api/films
-function index(req, res) {
+function indexFilm(req, res) {
   db.Film.find({}, function(err, allFilms) {
     res.json(allFilms);
   });
 }
 
-function create(req, res) {
+function createFilm(req, res) {
 
-  db.Film.create(req.body, function(err, film) {
+  db.Film.createFilm(req.body, function(err, film) {
     if (err) { console.log('error', err); }
     res.json(film);
   });
 }
 
-function show(req, res) {
+function showFilm(req, res) {
   db.Film.findById(req.params.filmId, function(err, foundFilm) {
-    if(err) { console.log('filmsController.show error', err); }
-    console.log('filmsController.show responding with', foundFilm);
+    if(err) { console.log('filmsController.showFilm error', err); }
     res.json(foundFilm);
   });
 }
 
-function destroy(req, res) {
+function destroyFilm(req, res) {
   db.Film.findOneAndRemove({ _id: req.params.filmId }, function(err, foundFilm){
     // note you could send just send 204, but we're sending 200 and the deleted entity
     res.json(foundFilm);
   });
 }
 
-function update(req, res) {
-  console.log('updating with data', req.body);
+function updateFilm(req, res) {
   db.Film.findById(req.params.filmId, function(err, foundFilm) {
-    if(err) { console.log('albumsController.update error', err); }
+    if(err) { console.log('filmsController.updateFilm error', err); }
     foundFilm.title = req.body.title;
     foundFilm.director = req.body.director;
     foundFilm.releaseDate = req.body.releaseDate;
@@ -52,9 +51,9 @@ function update(req, res) {
 
 // export public methods here
 module.exports = {
-  index: index,
-  create: create,
-  show: show,
-  destroy: destroy,
-  update: update
+  indexFilm: indexFilm,
+  createFilm: createFilm,
+  showFilm: showFilm,
+  destroyFilm: destroyFilm,
+  updateFilm: updateFilm
 };

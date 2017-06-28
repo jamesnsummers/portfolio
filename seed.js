@@ -43,14 +43,12 @@ var projectList = [];
 
 db.Project.remove(function(err, succ){
   db.Project.create(projectList, function(err, succ){
-    if (err){
-      return console.log("error:", err);
-    }
-    console.log("all projects:", projectList);
+    if (err){ return console.log("error:", err); }
     db.Project.find(succ);
   });
 });
 
+// Film page for future deployment
 var filmList = [];
   filmList.push({
     title: "Seven",
@@ -89,8 +87,6 @@ db.Film.remove({}, function(err, films){
 
   db.Film.create(filmList, function(err, films){
     if (err) { return console.log('ERROR', err); }
-    console.log("all albums:", films);
-    console.log("created", films.length, "films");
     process.exit();
   });
 

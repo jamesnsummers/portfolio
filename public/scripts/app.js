@@ -28,6 +28,7 @@ function config ($routeProvider, $locationProvider) {
       controller: 'ProjectsShowController',
       controllerAs: 'projectsShowCtrl'
     })
+    // Films page for future deployment
     .when('/films', {
       templateUrl: '/templates/films',
       controller: 'FilmsIndexController',
