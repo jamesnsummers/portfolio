@@ -7,7 +7,6 @@
     <title>James N Summers</title>
 
     <!-- STYLESHEETS -->
-
     <link rel="stylesheet" href="/styles/main.css">
 
     <!-- Materialize CSS -->
@@ -21,6 +20,7 @@
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- VENDOR SCRIPTS -->
     <script src="/vendor/angular/angular.min.js"></script>
@@ -33,23 +33,38 @@
 
   </head>
   <body>
-    <a class='dropdown-button btn right' data-beloworigin="true" href='#' data-activates='dropdown1'>Menu</a>
-    <ul id='dropdown1' class='dropdown-content'>
-      <li>Jump to:</li>
-      <li><a href="/">Home</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li>External Links</li>
-      <li><a href="https://www.linkedin.com/in/jamesnsummers/">LinkedIn</a></li>
-      <li><a href="https://www.twitter.com/jamesnsummers/">Twitter</a></li>
-      <li><a href="https://github.com/jamesnsummers">Github</a></li>
-    </ul>
+    <header>
+      <nav>
+        <div class="nav-wrapper transparent">
+          <a href="/" class="brand-logo">James N Summers</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="https://github.com/jamesnsummers">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/jamesnsummers/">LinkedIn</a></li>
+            <li><a href="https://www.twitter.com/jamesnsummers/">Twitter</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    <h1>James N Summers</h1>
-
-    <h5>Full Stack Developer</h5>
-
-
+  <main>
     <div ng-view></div>
+  </main>
+
+  <footer class="page-footer transparent">
+    <div class="footer-copyright">
+      <div class="container">
+        <a class="white-text" href="https://www.linkedin.com/in/jamesnsummers/">LinkedIn ||</a>
+        <a class="white-text" href="https://github.com/jamesnsummers">Github ||</a>
+        <a class="white-text" href="https://www.twitter.com/jamesnsummers/">Twitter</a>
+      </div>
+      <div class="container">
+        <p class="right">| © 2017</p>
+        <p class="right">Built with ♡ by James N Summers |</p>
+      </div>
+    </div>
+  </footer>
 
   </body>
 

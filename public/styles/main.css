@@ -1,6 +1,39 @@
 body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url("/images/james.jpg");
+    background-size: cover;
+  }
 
-}
+  nav {
+    padding-left: 2%;
+    padding-right: 2%;
+    background-image: url("/images/background.jpg");
+    opacity: .8;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+    padding-left: 2%;
+    padding-right: 2%;
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    opacity: .8;
+  }
+
+  #home-bio {
+    text-align: center;
+    padding-right: 25%;
+  }
+
+  #home-title {
+    text-align: center;
+    padding-right: 5%;
+  }
 
 .thumbnail {
   width: 80%;

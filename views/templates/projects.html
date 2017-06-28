@@ -1,8 +1,7 @@
-<div class="col s10 right">
-  <input type="text" class="input-field" ng-model="searchText" placeholder="Search Projects">
-</div>
+<input type="text" class="input-field transparent" ng-model="searchText" placeholder="Search Projects">
+<div class="row">
+  <h3 class="center">Projects</h3>
 <div ng-repeat="project in projectsIndexCtrl.projects | orderBy: 'title' | filter: searchText">
-  <div class="row">
     <div class="card col s6">
       <div class="card-content">
         <button ng-click="projectsIndexCtrl.deleteProject(project)" class='btn-floating halfway-fab waves-effect waves-light red raised'>X</button>
