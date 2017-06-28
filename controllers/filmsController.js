@@ -4,8 +4,6 @@
 
 var db = require('../models');
 
-
-
 // GET /api/films
 function index(req, res) {
   db.Film.find({}, function(err, allFilms) {
@@ -14,11 +12,9 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  console.log('body', req.body);
 
   db.Film.create(req.body, function(err, film) {
     if (err) { console.log('error', err); }
-    console.log(film);
     res.json(film);
   });
 }

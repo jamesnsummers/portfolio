@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var Director = require ('./director')
 
 var CastSchema = new Schema({
   name: String

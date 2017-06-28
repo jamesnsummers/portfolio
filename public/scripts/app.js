@@ -33,6 +33,11 @@ function config ($routeProvider, $locationProvider) {
       controller: 'FilmsIndexController',
       controllerAs: 'filmsIndexCtrl'
     })
+    .when('/films/:id', {
+      templateUrl: '/templates/films-show',
+      controller: 'FilmsShowController',
+      controllerAs: 'filmsShowCtrl'
+    })
 
     $locationProvider.html5Mode({
       enabled: true,
