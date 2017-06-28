@@ -25,14 +25,16 @@ footer {
     opacity: .8;
   }
 
-#home-bio {
-    text-align: center;
-    padding-right: 25%;
-  }
 
 #home-title {
     text-align: center;
     padding-right: 5%;
+  }
+
+#home-bio {
+    text-align: center;
+    margin-left: 58%;
+    width: 100%;
   }
 
 h3.center.white-text {
@@ -40,11 +42,18 @@ h3.center.white-text {
   padding-right: 3%;
 }
 
+#projects-title {
+  margin-top: -2%;
+  margin-bottom: 5%;
+  margin-left: -10%;
+}
+
 .card {
   opacity: .9;
   height: 350px;
   width: 350px;
 }
+
 
 #edit-btn {
   margin-bottom: 82%;

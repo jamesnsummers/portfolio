@@ -13,11 +13,11 @@
           <input ng-show="editing" ng-model="projectsShowCtrl.project.dateCompleted" type="text" class="form-control input-md">
           <br><br><span ng-hide="editing"><a href="{{projectsShowCtrl.project.url}}">Link to Project</a></span>
           <input ng-show="editing" ng-model="projectsShowCtrl.project.url" type="text" class="form-control input-md"><br><br>
-          <span ng-hide="editing">Description: {{projectsShowCtrl.project.descrip}}</span><br>
+          <span ng-hide="editing">Description:<br> {{projectsShowCtrl.project.descrip}}</span><br>
           <input ng-show="editing" ng-model="project.descrip" type="text" class="form-control input-md"><br>
-          <button class='waves-effect waves-light btn' ng-hide="editing" ng-click="editing = true">Edit Project</button>
-          <br><button class='waves-effect waves-light btn' ng-show="editing" ng-click="projectsIndexCtrl.editProject(project); editing = false">Save Changes</button>
-          <br><a href="/projects">Return to Projects Page</a>
+          <button id="edit-btn" class='btn-floating halfway-fab waves-effect waves-light blue raised' ng-hide="editing" ng-click="editing = true"><i class="material-icons">mode_edit</i></button>
+          <button id="edit-btn" class='btn-floating halfway-fab waves-effect waves-light green accent-3 raised' ng-show="editing" ng-click="projectsIndexCtrl.editProject(project); editing = false"><i class="material-icons">done</i></button>
+          <a href="/projects">Return to Projects Page</a>
         </div>
 
       </div>
