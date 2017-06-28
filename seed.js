@@ -85,22 +85,6 @@ var filmList = [];
     image: "/public/images/get-out-poster.jpg"
   });
 
-var directorList = [];
-  directorList.push({
-    name: "David Fincher",
-    alive: true
-  });
-  directorList.push({
-    name: "Destin Daniel Cretton",
-    alive: true
-  });
-  directorList.push({
-    name: "Jordan Peele",
-    alive: true
-  });
-
-
-
 db.Film.remove({}, function(err, films){
 
   db.Film.create(filmList, function(err, films){
@@ -110,39 +94,4 @@ db.Film.remove({}, function(err, films){
     process.exit();
   });
 
-});
-
-db.Director.remove(function(err, succ){
-  db.Director.create(directorList, function(err, newDirector){
-    if (err){
-      return console.log("Error:", err);
-    }
-
-    db.Film.remove({}, function(err, films){
-      filmList.forEach(function (filmData) {
-        var film = new db.Film({
-          title: filmData.title,
-          genre: filmData.genre,
-          releaseDate: filmData.releaseDate,
-          topBilledCast: filmData.topBilledCast,
-          image: filmData.image
-        });
-        db.Director.findOne({name: filmData.director}, function (err, foundDirector) {
-          console.log('found director ' + foundDirector.name + ' for film ' + film.title);
-          if (err) {
-            console.log(err);
-            return;
-          }
-          film.director = foundDirector;
-          film.save(function(err, savedFilm){
-            if (err) {
-              return console.log(err);
-            }
-            console.log('saved ' + savedFilm.title + ' directed by ' + foundDirector.name);
-          });
-        });
-      });
-    });
-    return console.log(filmList);
-  });
 });
