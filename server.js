@@ -47,6 +47,8 @@ app.post('/api/projects', controllers.project.create);
 app.delete('/api/projects/:projectId', controllers.project.destroy);
 app.put('/api/projects/:projectId', controllers.project.update);
 
+app.get('/api/films', controllers.film.index);
+
 // ALL OTHER ROUTES (ANGULAR HANDLES)
 // redirect all other paths to index
 app.get('*', function homepage (req, res) {

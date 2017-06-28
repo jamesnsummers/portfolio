@@ -28,6 +28,11 @@ function config ($routeProvider, $locationProvider) {
       controller: 'ProjectsShowController',
       controllerAs: 'projectsShowCtrl'
     })
+    .when('/films', {
+      templateUrl: '/templates/films',
+      controller: 'FilmsIndexController',
+      controllerAs: 'filmsIndexCtrl'
+    })
 
     $locationProvider.html5Mode({
       enabled: true,
