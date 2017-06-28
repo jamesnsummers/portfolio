@@ -1,46 +1,43 @@
-<div class="container" ng-controller="ProjectsIndexController as projectsIndexCtrl">
+<div id="add-card-form" class="container" ng-controller="ProjectsIndexController as projectsIndexCtrl">
   <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col s10 offset-s4">
       <form class="form-horizontal" ng-submit="projectsIndexCtrl.createProject()">
         <fieldset>
 
           <!-- Form Name -->
-          <legend>Add New Project</legend>
+          <legend class="white-text">Add New Project</legend>
 
           <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label">Title:</label>
-            <div class="col-md-4">
+          <div class="input-field">
+            <div class="col s12 white-text">
             <input id="name" ng-model="projectsIndexCtrl.newProject.title" type="text" class="form-control input-md" required="" placeholder="Title">
             </div>
           </div>
 
           <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label">Date Completed:</label>
-            <div class="col-md-4">
+          <div class="input-field">
+            <div class="col s12 white-text">
             <input ng-model="projectsIndexCtrl.newProject.dateCompleted" type="text" class="form-control input-md" placeholder="Date Completed">
             </div>
           </div>
 
           <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label">Link:</label>
-            <div class="col-md-4">
+          <div class="input-field">
+            <div class="col s12 white-text">
             <input ng-model="projectsIndexCtrl.newProject.url" type="text" class="form-control input-md" placeholder="Link to Project">
             </div>
           </div>
 
 
           <!-- Button -->
-          <div class="form-group">
-            <label class="col-md-4 control-label"></label>
-            <div class="col-md-4">
-              <button class="btn btn-success">Save Project</button>
+          <div class="input-field">
+            <div class="col s4">
+              <button class="waves-effect waves-light btn light-blue">Save Project</button>
             </div>
           </div>
         </fieldset>
       </form>
+      <br><br><a href="/projects">Return to Projects Page</a>
     </div>
   </div>
 </div>
