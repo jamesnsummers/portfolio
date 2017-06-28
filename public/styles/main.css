@@ -42,14 +42,18 @@ h3.center.white-text {
 
 .card {
   opacity: .9;
+  height: 350px;
+  width: 350px;
 }
 
 #edit-btn {
-  margin-bottom: 2%;
+  margin-bottom: 82%;
+  margin-right: -2%;
 }
 
 #delete-btn {
-  margin-bottom: 6%;
+  margin-bottom: 82%;
+  margin-right: 85%;
 }
 
 #add-card-form {

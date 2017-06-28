@@ -45,6 +45,7 @@ function update(req, res) {
     foundProject.title = req.body.title;
     foundProject.dateCompleted = req.body.dateCompleted;
     foundProject.url = req.body.url;
+    foundProject.descrip = req.body.descrip;
     foundProject.save(function(err, foundProject) {
       if(err) { console.log('saving altered project failed'); }
       res.json(foundProject);

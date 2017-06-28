@@ -7,7 +7,8 @@ var projectList = [];
   projectList.push({
     title: "Tic Tac Toe",
     dateCompleted: "May 7, 2017",
-    url: "http://jim-jac-joe.bitballoon.com/"
+    url: "http://jim-jac-joe.bitballoon.com/",
+    descrip: "A game of tic-tac-toe built using HTML, CSS, and Javascript."
   });
   projectList.push({
     title: "Ajaxify Reddit",
