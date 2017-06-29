@@ -6,7 +6,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-image: url("/images/james.jpg");
+  background-image: url("/images/background.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -50,17 +50,17 @@ footer {
 
 }
 
-#projects-title {
+/*#projects-title {
   margin-top: -2%;
   margin-bottom: 5%;
   margin-left: -10%;
-}
+}*/
 
 /*GLOBAL CARD STYLES*/
 .card {
   opacity: .9;
-  height: 350px;
-  width: 350px;
+  /*height: 350px;
+  width: 350px;*/
 }
 
 /*CARD STYLES FOR ADD FORM*/

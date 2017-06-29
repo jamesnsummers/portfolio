@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col s7 right">
+    <div class="col s12">
       <form>
         <div class="input-field">
           <input id="search" type="search" class="input-field transparent white-text" ng-model="searchText">
@@ -11,14 +11,14 @@
     </div>
   </div>
 </div>
-<div class="row ">
-  <div class="col right">
+<div class="row">
+  <div class="col s12 center">
     <h3 id="projects-title" class="white-text">Projects</h3>
+    <p class="white-text">Below is a list of some my most recent projects. The cards below are fully <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a>able so feel <br>free to have some fun with them, but be warned, if you do something I don't like, I'll change it back.</p>
   </div><br><br><br>
 <div ng-repeat="project in projectsIndexCtrl.projects | orderBy: 'dateCompleted' | filter: searchText">
-    <div class="card right blue-grey darken-3 hoverable">
+    <div class="card col s12 blue-grey darken-3 hoverable">
       <div class="card-content white-text">
-        <button ng-show="editing" ng-click="projectsIndexCtrl.deleteProject(project)" class='btn-floating left halfway-fab waves-effect waves-light red accent-2 raised'>X</button>
         <span class="card-title" ng-hide="editing"><a ng-href="projects/{{project._id}}">{{project.title}}</a></span>
         <input ng-show="editing" ng-model="project.title" type="text" class="form-control input-md"><br>
         <span ng-hide="editing">Date Completed: {{project.dateCompleted}}</span><br>
@@ -31,6 +31,7 @@
 
       <button class='btn-floating halfway-fab waves-effect waves-light blue raised' ng-hide="editing" ng-click="editing = true"><i class="material-icons">mode_edit</i></button>
       <button class='btn-floating halfway-fab waves-effect waves-light green accent-3 raised' ng-show="editing" ng-click="projectsIndexCtrl.editProject(project); editing = false"><i class="material-icons">done</i></button>
+      <button ng-show="editing" ng-click="projectsIndexCtrl.deleteProject(project)" class='btn-floating left halfway-fab waves-effect waves-light red accent-2 raised'>X</button>
     </div>
   </div>
 </div>
