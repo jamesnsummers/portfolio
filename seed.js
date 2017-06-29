@@ -16,7 +16,7 @@ var projectList = [];
     dateCompleted: "May 12, 2017",
     url: "https://github.com/jamesnsummers/ajaxify-reddit.git",
     descrip: "An app that replicates a list of stories from Reddit, with the story image, link, and any relevant information. Users can click the story link or image to go to the actual URL of the story.",
-    image: "/images/Ajaxify-Reddit-ScreenShot.png"
+    image: "/images/ajaxify-reddit.png"
   });
   projectList.push({
     title: "Geoquakes",
