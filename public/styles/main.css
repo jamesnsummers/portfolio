@@ -9,6 +9,7 @@ body {
   background-image: url("/images/background.jpg");
   background-size: cover;
   background-position: center;
+  background-color: #81c784;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
@@ -18,6 +19,7 @@ nav {
   padding-right: 2%;
   background-image: url("/images/background.jpg");
   background-size: cover;
+  background-color: #81c784;
   opacity: .8;
 }
 #mobile-demo {
@@ -43,6 +45,7 @@ footer {
   padding-right: 2%;*/
   background-image: url("/images/background.jpg");
   background-size: cover;
+  background-color: #81c784;
   opacity: .8;
 }
 
