@@ -47,21 +47,25 @@ footer {
   text-align: center;
 }
 
-#home-card-content {
-
-}
-
-/*#projects-title {
-  margin-top: -2%;
-  margin-bottom: 5%;
-  margin-left: -10%;
-}*/
-
 /*GLOBAL CARD STYLES*/
 .card {
   opacity: .9;
   /*height: 350px;
   width: 350px;*/
+}
+
+#share-primary-btn {
+  position: absolute;
+  right:60px;
+  bottom: 40px;
+}
+
+#share-secondary-btn {
+  position: inherit;
+}
+
+#share-list-btn {
+  right: -1px;
 }
 
 /*CARD STYLES FOR ADD FORM*/

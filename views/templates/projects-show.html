@@ -16,8 +16,16 @@
           <span ng-hide="editing">Description:<br> {{projectsShowCtrl.project.descrip}}</span><br>
           <input ng-show="editing" ng-model="projectsShowCtrl.project.descrip" type="text" class="input-field transparent white-text"><br>
           <br><a ng-hide="editing" href="/projects">Return to Projects Page</a>
-          <button id="edit-btn" class='btn-floating halfway-fab waves-effect waves-light blue raised' ng-hide="editing" ng-click="editing = true"><i class="material-icons">mode_edit</i></button>
-          <button id="edit-btn" class='btn-floating halfway-fab waves-effect waves-light green accent-3 raised' ng-show="editing" ng-click="projectsIndexCtrl.editProject(project); editing = false"><i class="material-icons">done</i></button>
+          <div id="share-primary-btn" class="fixed-action-btn right horizontal click-to-toggle">
+            <a id="share-secondary-btn" class="btn-floating btn-large waves-effect blue lighten-1">
+              <i class="material-icons">share</i>
+            </a>
+            <ul id="share-list-btn">
+              <li><a class="btn-floating red" href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-custom="true"><i class="fa fa-pinterest-p"></i></a></li>
+              <li><a class="btn-floating blue" href="https://twitter.com/share?url={{projectsShowCtrl.project.url}}&via=jamesnsummers" data-show-count="false"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a class="btn-floating blue darken-4" href="http://www.facebook.com/share.php?u={{projectsShowCtrl.project.url}}&title={{project.title}}"><i class="fa fa-facebook"></i></a></li>
+            </ul>
+          </div>
         </div>
 
       </div>
