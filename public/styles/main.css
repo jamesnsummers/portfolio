@@ -16,6 +16,7 @@ nav {
   padding-left: 2%;
   padding-right: 2%;
   background-image: url("/images/background.jpg");
+  background-size: cover;
   opacity: .8;
 }
 
@@ -34,8 +35,8 @@ main {
 
 /*FOOTER STYLES*/
 footer {
-  padding-left: 2%;
-  padding-right: 2%;
+  /*padding-left: 2%;
+  padding-right: 2%;*/
   background-image: url("/images/background.jpg");
   background-size: cover;
   opacity: .8;

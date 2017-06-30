@@ -50,8 +50,6 @@
             <!-- Film page for future deployment -->
             <!-- <li><a href="/films">Films</a></li> -->
             <li><a href="https://github.com/jamesnsummers">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/jamesnsummers/">LinkedIn</a></li>
-            <li><a href="https://www.twitter.com/jamesnsummers/">Twitter</a></li>
           </ul>
         </div>
       </nav>
@@ -63,9 +61,6 @@
         <!-- Film page for future deployment -->
         <!-- <li><a href="/films">Films</a></li> -->
         <li><a href="https://github.com/jamesnsummers">Github</a></li>
-        <li><a href="https://www.linkedin.com/in/jamesnsummers/">LinkedIn</a></li>
-        <li><a href="https://www.twitter.com/jamesnsummers/">Twitter</a></li>
-
       </ul>
 
     </header>
@@ -74,19 +69,16 @@
       <div ng-view></div>
     </main>
 
-  <footer class="page-footer transparent">
-    <div class="footer-copyright">
-      <div class="container">
-        <a class="white-text" href="https://www.linkedin.com/in/jamesnsummers/">LinkedIn ||</a>
-        <a class="white-text" href="https://github.com/jamesnsummers">Github ||</a>
-        <a class="white-text" href="https://www.twitter.com/jamesnsummers/">Twitter ||</a>
-        <a class="white-text" href="/resume">Resume</a>
+  <footer class="page-footer white-text">
+    <!-- <div class="container"> -->
+      <div class="row">
+        <div class="col l12 s12 center">
+            <a class="tooltipped white-text" data-position="top" data-delay="60" data-tooltip="LinkedIn" href="https://www.linkedin.com/in/jamesnsummers/">LinkedIn |</a>
+            <a class="tooltipped white-text" data-position="top" data-delay="60" data-tooltip="Github"  href="https://github.com/jamesnsummers">| Github |</a>
+            <a class="tooltipped white-text" data-position="top" data-delay="60" data-tooltip="Twitter"  href="https://www.twitter.com/jamesnsummers/">| Twitter</a>
+            <br>Built with ♡ by <a class="tooltipped white-text" data-position="top" data-delay="60" data-tooltip="Resume" href="/resume">James N Summers</a> © 2017
+        </div>
       </div>
-      <div class="container">
-        <p class="right">| © 2017</p>
-        <p class="right">Built with ♡ by James N Summers |</p>
-      </div>
-    </div>
   </footer>
 
   </body>
@@ -95,6 +87,7 @@
       $('.button-collapse').sideNav({
         closeOnClick: true
       });
+      $('.tooltipped').tooltip({delay: 50});
     });
   </script>
 
