@@ -9,6 +9,7 @@ body {
   background-image: url("/images/background.jpg");
   background-size: cover;
   background-position: center;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 /*NAVBAR STYLES*/
@@ -19,7 +20,6 @@ nav {
   background-size: cover;
   opacity: .8;
 }
-
 #mobile-demo {
   opacity: .7;
 }
@@ -28,7 +28,11 @@ nav {
 main {
   flex: 1 0 auto;
 }
-
+#jns-icon {
+  height: 10%;
+  width: 10%;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
 .conatiner {
   width: 90%;
 }
@@ -62,10 +66,12 @@ footer {
 
 #share-secondary-btn {
   position: inherit;
+  opacity: .9;
 }
 
 #share-list-btn {
   right: -1px;
+  opacity: .9;
 }
 
 /*CARD STYLES FOR ADD FORM*/
