@@ -6,11 +6,8 @@ body {
   background-image: url("/images/background.jpg");
   background-size: cover;
   background-position: center;
+  background-color: #e57373;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-}
-
-header {
-  background-color: #81c784;
 }
 
 /*NAVBAR STYLES*/
