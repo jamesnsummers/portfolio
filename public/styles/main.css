@@ -1,7 +1,4 @@
 /*GLOBAL STYLES*/
-html {
-  background-color: #81c784;
-}
 body {
   display: flex;
   min-height: 100vh;
@@ -9,7 +6,6 @@ body {
   background-image: url("/images/background.jpg");
   background-size: cover;
   background-position: center;
-  background-color: #81c784;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
@@ -19,7 +15,6 @@ nav {
   padding-right: 2%;
   background-image: url("/images/background.jpg");
   background-size: cover;
-  background-color: #81c784;
   opacity: .8;
 }
 #mobile-demo {
@@ -41,8 +36,6 @@ main {
 
 /*FOOTER STYLES*/
 footer {
-  /*padding-left: 2%;
-  padding-right: 2%;*/
   background-image: url("/images/background.jpg");
   background-size: cover;
   background-color: #81c784;
@@ -57,8 +50,6 @@ footer {
 /*GLOBAL CARD STYLES*/
 .card {
   opacity: .9;
-  /*height: 350px;
-  width: 350px;*/
 }
 
 #share-primary-btn {
