@@ -50,6 +50,7 @@ var projectList = [];
 db.Project.remove(function(err, succ){
   db.Project.create(projectList, function(err, succ){
     if (err){ return console.log("error:", err); }
-    db.Project.find(succ);
+    process.exit(0)
+    // db.Project.find(succ);
   });
 });
