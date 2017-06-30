@@ -15,7 +15,7 @@ var projectList = [];
     title: "Ajaxify Reddit",
     dateCompleted: "May 12, 2017",
     url: "https://github.com/jamesnsummers/ajaxify-reddit.git",
-    descrip: "An app that replicates a list of stories from Reddit, with the story image, link, and any relevant information. Users can click the story link or image to go to the actual URL of the story.",
+    descrip: "An app built using HTML, CSS, Javascript, and jQuery that replicates a list of stories from Reddit by accessing their API via AJAX calls. Users can click the story link or image to go to the actual URL of the story.",
     image: "/images/ajaxify-reddit.png"
   });
   projectList.push({
@@ -36,14 +36,14 @@ var projectList = [];
     title: "TacOMG",
     dateCompleted: "June 2, 2017",
     url: "http://tacomg.herokuapp.com",
-    descrip: "The TacOMG app allows users to create their ideal taco and populate a gallery of tacos. In this gallery, they can vote for their favorite tacos and see how many votes each taco has.",
+    descrip: "The TacOMG app was built using the MEN (MongoDB, Express, Node.js) stack and Facebook Passport for auth. It allows users to create their ideal taco and populate a gallery of tacos. In this gallery, they can vote for their favorite tacos and see how many votes each taco has.",
     image: "/images/tacomg.png"
   });
   projectList.push({
     title: "TimeShare",
     dateCompleted: "June 23, 2017",
     url: "http://timeshare-atx.herokuapp.com",
-    descrip: "An app that allows people to post content that captures meaningful moments in their lives.",
+    descrip: "TimeShare is an app built using the MERN (MongoDB, Express, ReactJS, and Node.js) stack and Firebase for auth. It allows people to post content that captures meaningful moments in their lives.",
     image: "/images/timeshare.png"
   });
 
