@@ -9,6 +9,10 @@ body {
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
+header {
+  background-color: #81c784;
+}
+
 /*NAVBAR STYLES*/
 nav {
   padding-left: 2%;
