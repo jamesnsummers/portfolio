@@ -40,19 +40,11 @@ app.get('/templates/:name', function templates(req, res) {
  */
 
 app.get('/api', controllers.api.index);
-
 app.get('/api/projects', controllers.project.index);
 app.get('/api/projects/:projectId', controllers.project.show);
 app.post('/api/projects', controllers.project.create);
 app.delete('/api/projects/:projectId', controllers.project.destroy);
 app.put('/api/projects/:projectId', controllers.project.update);
-
-// Films pages for future deployment
-app.get('/api/films', controllers.film.indexFilm);
-app.get('/api/films/:filmId', controllers.film.showFilm);
-app.post('/api/films', controllers.film.createFilm);
-app.delete('/api/films/:filmId', controllers.film.destroyFilm);
-app.put('/api/films/:filmId', controllers.film.updateFilm);
 
 // ALL OTHER ROUTES (ANGULAR HANDLES)
 // redirect all other paths to index

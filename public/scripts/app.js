@@ -31,17 +31,6 @@ function config ($routeProvider, $locationProvider) {
       controller: 'ProjectsShowController',
       controllerAs: 'projectsShowCtrl'
     })
-    // Films page for future deployment
-    .when('/films', {
-      templateUrl: '/templates/films',
-      controller: 'FilmsIndexController',
-      controllerAs: 'filmsIndexCtrl'
-    })
-    .when('/films/:id', {
-      templateUrl: '/templates/films-show',
-      controller: 'FilmsShowController',
-      controllerAs: 'filmsShowCtrl'
-    })
 
     $locationProvider.html5Mode({
       enabled: true,
