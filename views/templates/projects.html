@@ -16,7 +16,7 @@
     <h3 id="projects-title" class="white-text">Projects</h3>
     <p class="white-text">Below is a list of some my most recent projects. The cards below are fully <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a>able so feel <br>free to have some fun with them, but be warned, if you do something I don't like, I'll change it back.</p>
   </div><br><br><br>
-<div ng-repeat="project in projectsIndexCtrl.projects | orderBy: 'dateCompleted' | filter: searchText">
+  <div ng-repeat="project in projectsIndexCtrl.projects | orderBy: 'dateCompleted' | filter: searchText">
     <div class="card col s12 blue-grey darken-3 hoverable">
       <div class="card-content white-text">
         <span class="card-title" ng-hide="editing"><a ng-href="projects/{{project._id}}">{{project.title}}</a></span>
@@ -29,9 +29,25 @@
         <input ng-show="editing" ng-model="project.descrip" type="text" class="form-control input-md"><br>
       </div>
 
-      <button class='btn-floating halfway-fab waves-effect waves-light blue raised' ng-hide="editing" ng-click="editing = true"><i class="material-icons">mode_edit</i></button>
+      <div class="fixed-action-btn right horizontal click-to-toggle" style="position: absolute; right:60px; bottom: 40px;">
+        <a class="btn-floating btn-large red lighten-1" style="position: inherit;">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul style="position: inherit;">
+          <li><a class="btn-floating green" href="mailto:jamesnsummers@gmail.com"><i class="material-icons">email</i></a></li>
+          <li><a class="btn-floating red" href="https://www.pinterest.com/pin/create/button/"  data-pin-do="buttonBookmark" data-pin-custom="true"><i class="fa fa-pinterest-p"></i></a></li>
+          <li><a class="btn-floating blue" href="https://twitter.com/share?url={{project.url}}&via=jamesnsummers" data-show-count="false"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a class="btn-floating blue darken-4" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.jamesnsummers.com%2Fprojects%2F%257B%257Bproject.url%257D%257D&amp;src=sdkpreparse"><i class="fa fa-facebook"></i></a></li>
+        </ul>
+      </div>
+
+    <div class="fb-share-button" data-href="http://www.jamesnsummers.com/projects/&#123;&#123;project.url&#125;&#125;" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+      <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.jamesnsummers.com%2Fprojects%2F%257B%257Bproject.url%257D%257D&amp;src=sdkpreparse">Share</a>
+    </div>
+
+      <!-- <button class='btn-floating halfway-fab waves-effect waves-light blue raised' ng-hide="editing" ng-click="editing = true"><i class="material-icons">mode_edit</i></button>
       <button class='btn-floating halfway-fab waves-effect waves-light green accent-3 raised' ng-show="editing" ng-click="projectsIndexCtrl.editProject(project); editing = false"><i class="material-icons">done</i></button>
-      <button ng-show="editing" ng-click="projectsIndexCtrl.deleteProject(project)" class='btn-floating left halfway-fab waves-effect waves-light red accent-2 raised'>X</button>
+      <button ng-show="editing" ng-click="projectsIndexCtrl.deleteProject(project)" class='btn-floating left halfway-fab waves-effect waves-light red accent-2 raised'>X</button> -->
     </div>
   </div>
 </div>
