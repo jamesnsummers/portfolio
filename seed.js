@@ -46,6 +46,13 @@ var projectList = [];
     descrip: "TimeShare is an app built using the MERN (MongoDB, Express, ReactJS, and Node.js) stack and Firebase for auth. It allows people to post content that captures meaningful moments in their lives.",
     image: "/images/timeshare.png"
   });
+  projectList.push({
+    title: "Marathonr",
+    dateCompleted: "July 14, 2017",
+    url: "https://github.com/jamesnsummers/Marathonr-App",
+    descrip: "The Marathonr app builds movie marathons. Users enter their location data, pick a date, and select the movies they want to see, and Marathonr does the rest!",
+    image: "/images/countdown.gif"
+  });
 
 db.Project.remove(function(err, succ){
   db.Project.create(projectList, function(err, succ){
