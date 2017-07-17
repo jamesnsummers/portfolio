@@ -50,7 +50,7 @@ var projectList = [];
     title: "Marathonr",
     dateCompleted: "July 14, 2017",
     url: "https://github.com/jamesnsummers/Marathonr-App",
-    descrip: "The Marathonr app builds movie marathons. Users enter their location data, pick a date, and select the movies they want to see, and Marathonr does the rest! This project was created using Python, Django, SQLite, HTML, andd CSS.",
+    descrip: "The Marathonr app builds movie marathons. Users enter their location data, pick a date, and select the movies they want to see, and Marathonr does the rest! This project was created using Python, Django, SQLite, HTML, and CSS.",
     image: "/images/countdown.gif"
   });
 
