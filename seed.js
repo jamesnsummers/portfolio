@@ -29,7 +29,7 @@ var projectList = [];
     title: "Choose Your Own Adventure",
     dateCompleted: "May 8, 2017",
     url: "https://github.com/jamesnsummers/js_adventure.git",
-    descrip: "Go down the rabbit hole in this built with pure javascript",
+    descrip: "Go down the rabbit hole in this game built with pure javascript",
     image: "/images/cyoa.png"
   });
   projectList.push({
