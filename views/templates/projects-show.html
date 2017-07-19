@@ -11,7 +11,7 @@
           <input ng-show="editing" ng-model="projectsShowCtrl.project.title" type="text" class="input-field transparent white-text">
           <br><span ng-hide="editing">Date Complete: {{projectsShowCtrl.project.dateCompleted}}</span>
           <input ng-show="editing" ng-model="projectsShowCtrl.project.dateCompleted" type="text" class="input-field transparent white-text">
-          <br><br><span ng-hide="editing"><a href="{{projectsShowCtrl.project.url}}">Link to Project</a></span>
+          <br><br><span ng-hide="editing"><a href="{{projectsShowCtrl.project.url}}" target="_blank">Link to Project</a></span>
           <input ng-show="editing" ng-model="projectsShowCtrl.project.url" type="text" class="input-field transparent white-text"><br><br>
           <span ng-hide="editing">Description:<br> {{projectsShowCtrl.project.descrip}}</span><br>
           <input ng-show="editing" ng-model="projectsShowCtrl.project.descrip" type="text" class="input-field transparent white-text"><br>
