@@ -3,7 +3,7 @@
     <div class="col s12">
       <form>
         <div class="input-field">
-          <input id="search" type="search" class="input-field transparent white-text" ng-model="searchText">
+          <input id="search" type="search" class="input-field transparent white-text" ng-model="searchText" placeholder="search using keywords">
           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
           <i class="material-icons">close</i>
         </div>
@@ -17,7 +17,7 @@
     <h5 class="white-text">Below is a selection of my most recent projects.</h5>
   </div><br><br><br>
 
-  <div ng-repeat="project in projectsIndexCtrl.projects | orderBy: 'dateCompleted' | filter: searchText">
+  <div ng-repeat="project in projectsIndexCtrl.projects | orderBy: '-dateCompleted' | filter: searchText">
     <div class="card col s12 blue-grey darken-3 hoverable">
       <div class="card-content white-text">
         <span class="card-title" ng-hide="editing"><a ng-href="projects/{{project._id}}">{{project.title}}</a></span>
