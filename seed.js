@@ -32,13 +32,13 @@ var projectList = [];
     descrip: "The Marathonr app builds movie marathons. Users enter their location data, pick a date, and select the movies they want to see, and Marathonr does the rest! This project was created using Python, Django, SQLite, HTML, and CSS.",
     image: "/images/countdown.gif"
   });
-  // projectList.push({
-  //   title: "Geoquakes",
-  //   dateCompleted: "05/14/2017",
-  //   url: "https://github.com/jamesnsummers/geoquakes.git",
-  //   descrip: "An app built using jQuery's ajax() function to make calls to a third party API, Google Maps. Uses live data from the USGS (United States Geological Survey), specifically a data set showing significant earthquakes (M4.0 or greater) from the past week.",
-  //   image: "/images/geoquakes.png"
-  // });
+  projectList.push({
+    title: "Geoquakes",
+    dateCompleted: "05/14/2017",
+    url: "https://github.com/jamesnsummers/geoquakes.git",
+    descrip: "An app built using jQuery's ajax() function to make calls to a third party API, Google Maps. Uses live data from the USGS (United States Geological Survey), specifically a data set showing significant earthquakes (M4.0 or greater) from the past week.",
+    image: "/images/geoquakes.png"
+  });
   projectList.push({
     title: "TacOMG",
     dateCompleted: "06/02/2017",
