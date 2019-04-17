@@ -17,7 +17,7 @@
     <h5 class="white-text">Below is a selection of my most recent projects.</h5>
   </div><br><br><br>
 
-  <div ng-repeat="project in projectsIndexCtrl.projects | orderBy: '-dateCompleted' | filter: searchText">
+  <div ng-repeat="project in projectsIndexCtrl.projects | filter: searchText">
     <div class="card col s12 blue-grey darken-3 hoverable">
       <div class="card-content white-text">
         <span class="card-title" ng-hide="editing"><a ng-href="projects/{{project._id}}">{{project.title}}</a></span>
