@@ -53,6 +53,13 @@ var projectList = [];
     descrip: "I built this portfolio using AngularJS, HTML, CSS, Javascript, jQuery, Mongoose/MongoDB, and Express. I enjoy meta things, thus this.",
     image: "/images/JnS.png"
   });
+  projectList.push({
+    title: "A/B Testing w/ React",
+    dateCompleted: "05/15/2018",
+    url: "https://github.com/jamesnsummers/ab-testing-with-react",
+    descrip: "This app showcases a lightweight approach to implementing A/B tests on a React app.",
+    image: "/images/ab-testing-react.png"
+  });
 
 db.Project.remove(function(err, succ){
   db.Project.create(projectList, function(err, succ){
