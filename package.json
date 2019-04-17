@@ -30,6 +30,7 @@
     "body-parser": "^1.17.2",
     "bower": "^1.8.0",
     "express": "^4.15.3",
+    "heroku": "^7.22.9",
     "jquery": "^3.2.1",
     "mongoose": "^4.10.5"
   }
