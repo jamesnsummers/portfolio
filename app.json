@@ -1,0 +1,24 @@
+{
+  "addons": [
+    "mongolab"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "MONGOLAB_ONYX_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "jamesnsummers-portfolio",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
