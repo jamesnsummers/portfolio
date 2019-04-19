@@ -34,5 +34,6 @@
     "jquery": "^3.2.1",
     "mongodb": "^3.6.12",
     "mongoose": "^4.10brew un.5"
-  }
+  },
+  "devDependencies": {}
 }
