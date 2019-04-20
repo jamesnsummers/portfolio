@@ -1,6 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col s12">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" class="input-field transparent white-text" ng-model="searchText" placeholder="search using keywords">
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
     </div>
   </div>
 </div>
@@ -8,70 +15,32 @@
   <div class="col s12 center">
     <h3 id="projects-title" class="white-text">Projects</h3>
     <h5 class="grey-text find-more">[ more on <a class="blue-text" href="https://github.com/jamesnsummers" target="_blank">Github</a> ]</h5>
-    <h6 class="white-text"></h6>
   </div><br><br><br>
 
-  <div class="card col s12 blue-grey darken-3 hoverable">
-    <div class="card-content white-text">
-      <span class="card-title">A/B Testing w/ React</span>
-      <span>Date Completed: 05/15/2018</span><br>
-      <span><a href="https://github.com/jamesnsummers/ab-testing-with-react" target="_blank">Link to Project</a></span><br>
-      <span>Description: <br>This app showcases a lightweight approach to implementing A/B tests on a React app.</span><br>
-    </div>
+  <div ng-repeat="project in projectsIndexCtrl.projects | orderBy: 'order' : true | filter: searchText">
+    <div class="card col s12 blue-grey darken-3 hoverable">
+      <div class="card-content white-text">
+        <span class="card-title" ng-hide="editing"><a ng-href="projects/{{project._id}}">{{project.title}}</a></span>
+        <input ng-show="editing" ng-model="project.title" type="text" class="form-control input-md"><br>
+        <span ng-hide="editing">Date Completed: {{project.dateCompleted}}</span><br>
+        <input ng-show="editing" ng-model="project.dateCompleted" type="text" class="form-control input-md"><br>
+        <span ng-hide="editing"><a href="{{project.url}}" target="_blank">Link to Project</a></span><br>
+        <input ng-show="editing" ng-model="project.url" type="text" class="form-control input-md"><br>
+        <span ng-hide="editing">Description: <br>{{project.descrip}}</span><br>
+        <input ng-show="editing" ng-model="project.descrip" type="text" class="form-control input-md"><br>
+      </div>
 
-    <div id="share-primary-btn" class="fixed-action-btn right horizontal click-to-toggle">
-      <a id="share-secondary-btn" class="btn-floating btn-large waves-effect waves-red blue-grey lighten-3">
-        <i class="material-icons">share</i>
-      </a>
-      <ul id="share-list-btn">
-        <li><a class="btn-floating blue" href="https://twitter.com/share?url=https://github.com/jamesnsummers/ab-testing-with-react&via=jamesnsummers" data-show-count="false"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        <li><a class="btn-floating blue darken-1" href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/jamesnsummers/ab-testing-with-react" data-pin-do="buttonBookmark" data-pin-custom="true"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="btn-floating blue darken-4" href="http://www.facebook.com/share.php?u=https://github.com/jamesnsummers/ab-testing-with-react&title=A/B_Testing_w_React"><i class="fa fa-facebook"></i></a></li>
-      </ul>
-    </div>
+      <div id="share-primary-btn" class="fixed-action-btn right horizontal click-to-toggle">
+        <a id="share-secondary-btn" class="btn-floating btn-large waves-effect waves-red blue-grey lighten-3">
+          <i class="material-icons">share</i>
+        </a>
+        <ul id="share-list-btn">
+          <li><a class="btn-floating blue" href="https://twitter.com/share?url={{project.url}}&via=jamesnsummers" data-show-count="false"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a class="btn-floating blue darken-1" href="https://www.linkedin.com/shareArticle?mini=true&url={{project.url}}" data-pin-do="buttonBookmark" data-pin-custom="true"><i class="fa fa-linkedin"></i></a></li>
+          <li><a class="btn-floating blue darken-4" href="http://www.facebook.com/share.php?u={{project.url}}&title={{project.title}}"><i class="fa fa-facebook"></i></a></li>
+        </ul>
+      </div>
 
+    </div>
   </div>
-
-  <div class="card col s12 blue-grey darken-3 hoverable">
-    <div class="card-content white-text">
-      <span class="card-title">Matthew Genitempo - Photography</span>
-      <span>Date Completed: 02/26/2018</span><br>
-      <span><a href="https://www.matthewgenitempo.com/" target="_blank">Link to Project</a></span><br>
-      <span>Description: <br>This site was originally designed and built by the photographer Matthew Genitempo using SquareSpace. I was asked to update the hosting service used for the site and to make some functional changes on the frontend that weren't easily accomplished within a CMS. Working within the SquareSpace CMS using their developer tools and writing custom code, I finished the front-end updates, and we launched the site on February 26, 2018.</span><br>
-    </div>
-
-    <div id="share-primary-btn" class="fixed-action-btn right horizontal click-to-toggle">
-      <a id="share-secondary-btn" class="btn-floating btn-large waves-effect waves-red blue-grey lighten-3">
-        <i class="material-icons">share</i>
-      </a>
-      <ul id="share-list-btn">
-        <li><a class="btn-floating blue" href="https://twitter.com/share?url=https://www.matthewgenitempo.com/&via=jamesnsummers" data-show-count="false"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        <li><a class="btn-floating blue darken-1" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.matthewgenitempo.com/" data-pin-do="buttonBookmark" data-pin-custom="true"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="btn-floating blue darken-4" href="http://www.facebook.com/share.php?u=https://www.matthewgenitempo.com/&title=Matthew_Genitempo"><i class="fa fa-facebook"></i></a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="card col s12 blue-grey darken-3 hoverable">
-    <div class="card-content white-text">
-      <span class="card-title">Marathonr</span>
-      <span>Date Completed: 07/14/2017</span><br>
-      <span><a href="https://github.com/jamesnsummers/Marathonr-App" target="_blank">Link to Project</a></span><br>
-      <span>Description: <br>The Marathonr app builds movie marathons. Users enter their location data, pick a date, and select the movies they want to see, and Marathonr does the rest! This project was created using Python, Django, SQLite, HTML, and CSS.</span><br>
-    </div>
-
-    <div id="share-primary-btn" class="fixed-action-btn right horizontal click-to-toggle">
-      <a id="share-secondary-btn" class="btn-floating btn-large waves-effect waves-red blue-grey lighten-3">
-        <i class="material-icons">share</i>
-      </a>
-      <ul id="share-list-btn">
-        <li><a class="btn-floating blue" href="https://twitter.com/share?url=https://github.com/jamesnsummers/Marathonr-App&via=jamesnsummers" data-show-count="false"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        <li><a class="btn-floating blue darken-1" href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/jamesnsummers/Marathonr-App" data-pin-do="buttonBookmark" data-pin-custom="true"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="btn-floating blue darken-4" href="http://www.facebook.com/share.php?u=https://github.com/jamesnsummers/Marathonr-App/&title=Marathonr"><i class="fa fa-facebook"></i></a></li>
-      </ul>
-    </div>
-
-  </div>
-
 </div>
