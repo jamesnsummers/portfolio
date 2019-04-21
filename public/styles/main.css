@@ -52,8 +52,14 @@ footer {
   opacity: .9;
 }
 
+body > main > div > div.row.ng-scope > div.col.s12.center {
+    padding-bottom: 20px;
+}
+
 h5.find-more {
+  display: inline-block;
   font-style: italic;
+  padding: 5px 30px 0;
 }
 
 #share-primary-btn {
