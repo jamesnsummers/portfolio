@@ -5,27 +5,11 @@ var db = require('./models');
 
 var projectList = [];
   projectList.push({
-    title: "Geoquakes",
-    dateCompleted: "05/14/2017",
-    url: "https://github.com/jamesnsummers/geoquakes.git",
-    descrip: "An app built using jQuery's ajax() function to make calls to a third party API, Google Maps. Uses live data from the USGS (United States Geological Survey), specifically a data set showing significant earthquakes (M4.0 or greater) from the past week.",
-    image: "/images/geoquakes.png",
-    order: 9
-  });
-  projectList.push({
     title: "Tic Tac Toe",
     dateCompleted: "05/07/2017",
     url: "http://jim-jac-joe.bitballoon.com/",
     descrip: "A game of tic-tac-toe built using HTML, CSS, and Javascript.",
     image: "/images/tic-tac-toe.png",
-    order: 8
-  });
-  projectList.push({
-    title: "Choose Your Own Adventure",
-    dateCompleted: "05/08/2017",
-    url: "https://github.com/jamesnsummers/js_adventure.git",
-    descrip: "Go down the rabbit hole in this game built with pure javascript",
-    image: "/images/cyoa.png",
     order: 7
   });
   projectList.push({
