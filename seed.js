@@ -16,7 +16,9 @@ var projectList = [];
     title: "TacOMG",
     dateCompleted: "06/02/2017",
     url: "http://tacomg.herokuapp.com",
-    descrip: "The TacOMG app was built using the MEN (MongoDB, Express, Node.js) stack and Facebook Passport for auth. It allows users to create their ideal taco and populate a gallery of tacos. In this gallery, they can vote for their favorite tacos and see how many votes each taco has.",
+    descrip: `The TacOMG app was built using the MEN (MongoDB, Express, Node.js) stack and Facebook Passport for auth.
+              It allows users to create their ideal taco and populate a gallery of tacos. In this gallery,
+              they can vote for their favorite tacos and see how many votes each taco has.`,
     image: "/images/tacomg.png",
     order: 6
   });
@@ -24,7 +26,8 @@ var projectList = [];
     title: "TimeShare",
     dateCompleted: "06/23/2017",
     url: "http://timeshare-atx.herokuapp.com",
-    descrip: "TimeShare is an app built using the MERN (MongoDB, Express, ReactJS, and Node.js) stack and Firebase for auth. It allows people to post content that captures meaningful moments in their lives.",
+    descrip: `TimeShare is an app built using the MERN (MongoDB, Express, ReactJS, and Node.js) stack and Firebase for auth.
+              It allows people to post content that captures meaningful moments in their lives.`,
     image: "/images/timeshare.png",
     order: 5
   });
@@ -40,7 +43,9 @@ var projectList = [];
     title: "Marathonr",
     dateCompleted: "07/14/2017",
     url: "https://github.com/jamesnsummers/Marathonr-App",
-    descrip: "The Marathonr app builds movie marathons. Users enter their location data, pick a date, and select the movies they want to see, and Marathonr does the rest! This project was created using Python, Django, SQLite, HTML, and CSS.",
+    descrip: `The Marathonr app builds movie marathons.
+              Users enter their location data, pick a date, and select the movies they want to see,
+              and Marathonr does the rest! This project was created using Python, Django, SQLite, HTML, and CSS.`,
     image: "/images/countdown.gif",
     order: 3
   });
@@ -48,7 +53,11 @@ var projectList = [];
     title: "Matthew Genitempo - Photography",
     dateCompleted: "02/26/2018",
     url: "https://www.matthewgenitempo.com/",
-    descrip: "This site was originally designed and built by the photographer Matthew Genitempo using SquareSpace. I was brought on to update the hosting service used for the site and to make some functional changes on the frontend that weren't easily accomplished within the CMS. Working within the SquareSpace CMS, using their developer tools, and writing custom code, I finished the front-end updates, and we launched the site on February 26, 2018.",
+    descrip: `This site was originally designed and built by the photographer Matthew Genitempo using SquareSpace.
+              I was brought on to update the hosting service used for the site and to make some functional changes
+              on the frontend that weren't easily accomplished within the CMS. Working within the SquareSpace CMS,
+              using their developer tools, and writing custom code, I finished the front-end updates, and we
+              launched the site on February 26, 2018.`,
     image: "/images/matthew_genitempo.png",
     order: 2
   });
