@@ -63,7 +63,7 @@ var projectList = [];
   projectList.push({
     title: "Matthew Genitempo - Photography",
     dateCompleted: "02/26/2018",
-    url: "https://github.com/jamesnsummers/ab-testing-with-react",
+    url: "https://www.matthewgenitempo.com/",
     descrip: "This site was originally designed and built by the photographer Matthew Genitempo using SquareSpace. I was brought on to update the hosting service used for the site and to make some functional changes on the frontend that weren't easily accomplished within the CMS. Working within the SquareSpace CMS, using their developer tools, and writing custom code, I finished the front-end updates, and we launched the site on February 26, 2018.",
     image: "/images/matthew_genitempo.png",
     order: 2
@@ -71,7 +71,7 @@ var projectList = [];
   projectList.push({
     title: "A/B Testing w/ React",
     dateCompleted: "05/15/2018",
-    url: "https://www.matthewgenitempo.com/",
+    url: "https://github.com/jamesnsummers/ab-testing-with-react",
     descrip: "This app showcases a lightweight approach to implementing A/B tests on a React app.",
     image: "/images/a-b_testing_w_react.png",
     order: 1
